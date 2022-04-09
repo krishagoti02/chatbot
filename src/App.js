@@ -8,14 +8,15 @@ import { useAuthState, useDarkMode } from './hooks';
 // Components
 import Channel from './components/Channel';
 import Loader from './components/Loader';
+import image from './logo512.png';
 
 firebase.initializeApp({
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyAY6E55Sx0dqz5wkC0QIWSbU18p4EGdYb8",
+  authDomain: "chat-c616c.firebaseapp.com",
+  projectId: "chat-c616c",
+  storageBucket: "chat-c616c.appspot.com",
+  messagingSenderId: "335494225178",
+  appId: "1:335494225178:web:8046dbb8665d2dbbd8e0a3"
 });
 
 const MoonIcon = props => (
@@ -90,19 +91,8 @@ function App() {
       <div className="flex items-center justify-center shadow-md h-full">
         <div className="flex flex-col items-center justify-center max-w-xl w-full mx-4 p-8 rounded-md shadow-card bg-white dark:bg-coolDark-600 transition-all">
           <h2 className="mb-2 text-3xl flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="flex-shrink-0 w-12 h-12 mr-1 text-primary-500"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                clipRule="evenodd"
-              />
-            </svg>
-            React FireChat
+            <img src= {image} width='150px' />
+            Google Chat
           </h2>
           <p className="mb-8 text-lg text-center">
             The easiest way to chat with people all around the world.
@@ -150,8 +140,8 @@ function App() {
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: 'var(--topbar-height)' }}
       >
-        <a href="https://alterclass.io/courses/react">
-          <img src={brandLogo} alt="AlterClass" width={150} />
+        <a>
+          <img src={image} alt="Google Chat" width={150} />
         </a>
         <div className="flex items-center">
           {user ? (
